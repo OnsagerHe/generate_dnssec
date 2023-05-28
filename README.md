@@ -24,9 +24,9 @@ $ readlink -f /bin/sh
 ## Required
 
 To run the script, you need to define three variables in the script:
-**zone_file**: this file is your zone record. It often takes the form `db.domain.tld`.
-**fichier_dest**: this path must correspond to the location of the `zone_file` file, and will contain the ksk and zsk keys after script execution.
-**domain_zone**: This variable corresponds to the name of the zone for which you wish to define DNSSEC. It takes the form `domain.tld`.
+* **zone_file**: this file is your zone record. It often takes the form `db.domain.tld`.
+* **fichier_dest**: this path must correspond to the location of the `zone_file` file, and will contain the ksk and zsk keys after script execution.
+* **domain_zone**: This variable corresponds to the name of the zone for which you wish to define DNSSEC. It takes the form `domain.tld`.
 
 ## Options
 
