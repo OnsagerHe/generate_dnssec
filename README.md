@@ -46,3 +46,21 @@ bash auto_dnssec.sh --zsk
 ```bash
 bash auto_dnssec.sh --sign
 ```
+
+## Crontab
+
+This script must be run periodically, and can be launched with a crontab.
+
+For example, to recreate zsk keys every 3 months and ksk keys every year.
+```bash
+crontab -e
+0 0 1 */3 * /path/to/script/setup_dnssec.sh --zsk
+0 0 * 4 * /path/to/script/setup_dnssec.sh --ksk
+```
+
+You can then check that the crontab has been saved with `crontab -l`.
+
+To check the logs you can run the command:
+```bash
+cat /var/log/syslog | grep "cron"
+```
